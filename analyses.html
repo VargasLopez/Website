@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyses | Adrian Vargas-Lopez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <style>
+        .analyses-container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+        }
+
+        .analysis-section {
+            margin-bottom: 60px;
+        }
+
+        .analysis-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .lcsi-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .category-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .category-card p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Adrian Vargas-Lopez</a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#wip">Work in Progress</a>
+                <a href="index.html#teaching">Teaching</a>
+                <a href="index.html#publications">Publications</a>
+                <a href="analyses.html" class="active">Analyses</a>
+                <a href="index.html#cv">CV</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="analyses-container">
+        <h1>Zimbabwe: Livelihood Coping Strategies Analysis (2021-2025)</h1>
+        
+        <div class="analysis-section">
+            <h2>Understanding Coping Strategies</h2>
+            <p class="analysis-description">
+                The Livelihood Coping Strategies Index (LCSI) measures the extent to which households resort to negative coping mechanisms when facing food shortages or financial stress. These strategies are classified into three severity levels:
+            </p>
+            
+            <div class="lcsi-categories">
+                <div class="category-card">
+                    <h3>Stress Strategies</h3>
+                    <p>Reversible strategies like borrowing money, spending savings, or selling non-productive assets.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Crisis Strategies</h3>
+                    <p>Strategies that directly reduce future productivity, such as selling productive assets or withdrawing children from school.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Emergency Strategies</h3>
+                    <p>Severe strategies that are difficult to reverse, such as selling land/house or begging.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-section">
+            <h2>Trends Over Time</h2>
+            <p class="analysis-description">
+                The following chart illustrates the percentage of households adopting each category of coping strategy between 2021 and 2025.
+            </p>
+            <div class="chart-container">
+                <iframe src="FAO/lcsi_trend_chart.html" title="LCSI Trends Chart"></iframe>
+            </div>
+        </div>
+
+        <div class="analysis-section">
+            <h2>Geographic Distribution of Emergency Strategies</h2>
+            <p class="analysis-description">
+                This interactive map displays the prevalence of "Emergency Strategies" across Zimbabwe's provinces. Use the slider to view changes over time.
+            </p>
+            <div class="chart-container">
+                <iframe src="FAO/lcsi_map.html" title="Emergency Strategies Map"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
