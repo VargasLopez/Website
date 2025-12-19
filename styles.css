@@ -8,10 +8,10 @@
     --background-dark: #34495e;
     --text-color: #333333;
     --text-light: #ecf0f1;
-    
+
     --font-heading: 'Inter', sans-serif;
     --font-body: 'Lora', serif;
-    
+
     --nav-height: 70px;
     --container-width: 1000px;
 }
@@ -33,7 +33,12 @@ body {
     background-color: var(--background-light);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -98,7 +103,7 @@ a:hover {
     width: 100%;
     height: var(--nav-height);
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -196,8 +201,9 @@ a:hover {
 
 .about-image img {
     width: 100%;
-    border-radius: 4px; /* Minimalist rounded corner */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    /* Minimalist rounded corner */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
 
@@ -216,16 +222,16 @@ a:hover {
 }
 
 .publications-scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
 }
 
 .publications-scroll-container::-webkit-scrollbar-thumb {
-    background: #bdc3c7; 
+    background: #bdc3c7;
     border-radius: 3px;
 }
 
 .publications-scroll-container::-webkit-scrollbar-thumb:hover {
-    background: #95a5a6; 
+    background: #95a5a6;
 }
 
 .publication-item {
@@ -296,6 +302,32 @@ a:hover {
     font-size: 1.1rem;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-icon-link img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    /* Ensures images fill the square without distortion if aspect ratio differs, crops if necessary. Safe for profile pics/icons. */
+    border-radius: 8px;
+    /* Soft rounding */
+    transition: transform 0.3s ease;
+    background-color: white;
+    /* background for transparent images if any, ensures visibility on dark bg */
+}
+
+.social-icon-link img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Footer */
 .footer {
     padding: 2rem 0;
@@ -338,10 +370,11 @@ a:hover {
         flex-direction: column;
         background-color: white;
         width: 100%;
-        height: calc(100vh - var(--nav-height)); /* Full height minus navbar */
+        height: calc(100vh - var(--nav-height));
+        /* Full height minus navbar */
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
         padding-top: 2rem;
     }
 
@@ -375,7 +408,8 @@ a:hover {
         padding-right: 0;
         padding-left: 0;
         border-left: none;
-        max-height: none; /* Let it expand on mobile for better UX? Or keep scroll. Requirements said "sticky while rest of page remains". Keeping height. */
+        max-height: none;
+        /* Let it expand on mobile for better UX? Or keep scroll. Requirements said "sticky while rest of page remains". Keeping height. */
         /* Actually on mobile fixed height areas can be annoying. 
            But to follow "specific section... designated area", I'll keep it but maybe increase height or adjust padding. */
     }
